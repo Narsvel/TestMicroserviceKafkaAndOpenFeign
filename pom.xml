@@ -11,6 +11,7 @@
 
     <modules>
         <module>notification-service</module>
+        <module>email-notification-service</module>
     </modules>
 
 
