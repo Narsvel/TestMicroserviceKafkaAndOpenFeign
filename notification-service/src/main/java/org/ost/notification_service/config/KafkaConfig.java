@@ -17,7 +17,11 @@ import java.util.Map;
 @Configuration
 public class KafkaConfig {
 
-    Environment environment;
+    final Environment environment;
+
+    public KafkaConfig(Environment environment) {
+        this.environment = environment;
+    }
 
     Map<String, Object> producerConfig() {
         Map<String, Object> config = new HashMap<>();
