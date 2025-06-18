@@ -1,4 +1,4 @@
-package org.ost.notification_service.models;
+package org.ost.models;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

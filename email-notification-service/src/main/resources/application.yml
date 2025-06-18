@@ -4,9 +4,17 @@ spring:
 
   kafka:
     consumer:
-      bootstrap-servers: localhost:9092, localhost:9094
+      bootstrap-servers: localhost:9092, localhost:9094, localhost:9096
+      auto-offset-reset: earliest
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.ErrorHandlingDeserializer
+      properties:
+        spring:
+          json:
+            trusted.packages: "org.ost.services.event"
+            use.type.headers: false
+            value.default.type: "org.ost.services.event.ClientCreatedEvent"
+        spring.deserializer.value.delegate.class: org.springframework.kafka.support.serializer.JsonDeserializer
 
 server:
   port: 8090

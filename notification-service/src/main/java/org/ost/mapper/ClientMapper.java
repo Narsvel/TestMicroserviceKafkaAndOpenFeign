@@ -1,8 +1,8 @@
-package org.ost.notification_service.mapper;
+package org.ost.mapper;
 
-import org.ost.notification_service.dto.ClientDTO;
-import org.ost.notification_service.models.Client;
-import org.ost.notification_service.services.event.ClientCreatedEvent;
+import org.ost.dto.ClientDTO;
+import org.ost.models.Client;
+import org.ost.services.event.ClientCreatedEvent;
 import org.springframework.stereotype.Component;
 
 @Component

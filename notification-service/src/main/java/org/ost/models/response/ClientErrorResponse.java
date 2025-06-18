@@ -1,4 +1,4 @@
-package org.ost.notification_service.models.response;
+package org.ost.models.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

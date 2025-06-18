@@ -1,11 +1,11 @@
-package org.ost.notification_service.controllers;
+package org.ost.controllers;
 
 import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
-import org.ost.notification_service.dto.ClientDTO;
-import org.ost.notification_service.exception.ClientNotCreatedException;
-import org.ost.notification_service.models.response.ClientErrorResponse;
-import org.ost.notification_service.services.ClientsServiceImpl;
+import org.ost.dto.ClientDTO;
+import org.ost.exception.ClientNotCreatedException;
+import org.ost.models.response.ClientErrorResponse;
+import org.ost.services.ClientsServiceImpl;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;

@@ -1,4 +1,4 @@
-package org.ost.notification_service.dto;
+package org.ost.dto;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.Min;

@@ -1,6 +1,6 @@
-package org.ost.notification_service.services;
+package org.ost.services;
 
-import org.ost.notification_service.dto.ClientDTO;
+import org.ost.dto.ClientDTO;
 
 import java.util.concurrent.ExecutionException;
 

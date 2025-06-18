@@ -1,4 +1,4 @@
-package org.ost.notification_service;
+package org.ost;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
