@@ -1,6 +1,5 @@
 package org.ost.mapper;
 
-import com.example.avro.ClientAvro;
 import org.ost.dto.ClientDTO;
 import org.ost.models.Client;
 import org.ost.services.event.ClientCreatedEvent;
@@ -27,12 +26,12 @@ public class ClientMapper {
                 .build();
     }
 
-    public ClientAvro mapToClientAvro(Client client) {
-        return ClientAvro.newBuilder()
-                .setId(client.getId())
-                .setName(client.getName())
-                .setEmail(client.getEmail())
-                .setAge(client.getAge())
+    public ClientCreatedEvent mapToClientCreatedEvent(Client client) {
+        return ClientCreatedEvent.builder()
+                .id(client.getId())
+                .name(client.getName())
+                .email(client.getEmail())
+                .age(client.getAge())
                 .build();
     }
 }
