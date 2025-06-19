@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: weather-service
+
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5434/weather_db
+    username: postgres
+    password: postgres
+  flyway:
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+  cloud:
+    openfeign:
+      client:
+        config:
+          weather:
+            url: http://localhost:1111/weather
+
+server:
+  port: 8083
