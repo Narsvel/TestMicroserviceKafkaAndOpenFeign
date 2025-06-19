@@ -1,12 +1,12 @@
 package org.ost.services;
 
+import com.example.avro.ClientAvro;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.ost.dto.ClientDTO;
 import org.ost.mapper.ClientMapper;
 import org.ost.models.Client;
 import org.ost.repositories.ClientsRepository;
-import org.ost.services.event.ClientCreatedEvent;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.support.SendResult;
 import org.springframework.stereotype.Service;
@@ -22,14 +22,14 @@ public class ClientsServiceImpl implements ClientsService{
 
     private final ClientsRepository clientsRepository;
     private final ClientMapper clientMapper;
-    private final KafkaTemplate<String, ClientCreatedEvent> kafkaTemplate;
+    private final KafkaTemplate<String, ClientAvro> kafkaTemplate;
 
     @Override
     public ClientDTO create(ClientDTO clientDTO) throws ExecutionException, InterruptedException {
         Client saveClient = clientsRepository.save(clientMapper.mapToClient(clientDTO));
 
-        SendResult<String, ClientCreatedEvent> result = kafkaTemplate
-                .send("client-created-topic", clientMapper.mapToClientCreatedEvent(saveClient)).get();
+        SendResult<String, ClientAvro> result = kafkaTemplate
+                .send("client-created-topic", clientMapper.mapToClientAvro(saveClient)).get();
 
         log.info("RecordMetadata: {}", result.getRecordMetadata());
 
