@@ -6,7 +6,7 @@ import org.ost.dto.ClientDTO;
 import org.ost.mapper.ClientMapper;
 import org.ost.models.Client;
 import org.ost.repositories.ClientsRepository;
-import org.ost.services.event.ClientCreatedEvent;
+import org.ost.dto.event.ClientCreatedEvent;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.kafka.support.SendResult;
 import org.springframework.stereotype.Service;

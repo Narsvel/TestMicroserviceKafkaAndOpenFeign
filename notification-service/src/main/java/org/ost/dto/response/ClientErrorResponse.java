@@ -1,4 +1,4 @@
-package org.ost.models.response;
+package org.ost.dto.response;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

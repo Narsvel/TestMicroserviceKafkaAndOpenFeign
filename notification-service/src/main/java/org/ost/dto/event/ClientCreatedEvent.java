@@ -1,4 +1,4 @@
-package org.ost.services.event;
+package org.ost.dto.event;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

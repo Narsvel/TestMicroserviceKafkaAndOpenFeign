@@ -2,7 +2,7 @@ package org.ost.mapper;
 
 import org.ost.dto.ClientDTO;
 import org.ost.models.Client;
-import org.ost.services.event.ClientCreatedEvent;
+import org.ost.dto.event.ClientCreatedEvent;
 import org.springframework.stereotype.Component;
 
 @Component

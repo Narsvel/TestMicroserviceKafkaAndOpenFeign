@@ -4,7 +4,7 @@ import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.ost.dto.ClientDTO;
 import org.ost.exception.ClientNotCreatedException;
-import org.ost.models.response.ClientErrorResponse;
+import org.ost.dto.response.ClientErrorResponse;
 import org.ost.services.ClientsServiceImpl;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

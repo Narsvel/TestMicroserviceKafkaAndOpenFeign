@@ -2,7 +2,7 @@ package org.ost.config;
 
 import org.apache.kafka.clients.admin.NewTopic;
 import org.apache.kafka.clients.producer.ProducerConfig;
-import org.ost.services.event.ClientCreatedEvent;
+import org.ost.dto.event.ClientCreatedEvent;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
