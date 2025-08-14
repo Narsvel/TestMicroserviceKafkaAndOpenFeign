@@ -13,6 +13,7 @@
         <module>notification-service</module>
         <module>email-notification-service</module>
         <module>weather-service</module>
+        <module>custom-loggin-spring-boot-starter</module>
     </modules>
 
 

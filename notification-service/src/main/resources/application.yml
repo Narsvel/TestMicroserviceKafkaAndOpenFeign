@@ -19,7 +19,7 @@ spring:
 
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5433/clients_db
+    url: jdbc:postgresql://localhost:5461/clients_db
     username: postgres
     password: postgres
   flyway:
@@ -31,5 +31,17 @@ spring:
 #      mode: ALWAYS
 #      schema-locations: classpath*:database/V1__Create_client_table.sql
 
+logging:
+  level:
+    root: INFO
+  file:
+    name: by.ost
+    path: /
+
 server:
   port: 8080
+
+app:
+  service:
+    logging:
+      enable: true
